@@ -1,16 +1,23 @@
 {
-  "name": "fhirplace-empty-plugin",
+  "name": "MYAPP",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.4",
+    "grunt": "latest",
     "grunt-cli": "latest",
     "bower": "latest",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-connect": "latest",
+    "webpack": "latest",
+    "grunt-webpack": "latest",
+    "coffee": "latest",
+    "coffee-loader": "latest"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "grunt test"

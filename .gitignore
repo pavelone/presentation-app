@@ -1,4 +1,6 @@
 app/bower_components
 dist
 node_modules
-resources/public
+resources/publicbower_components
+bower_components
+*sw?
