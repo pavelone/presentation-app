@@ -11,6 +11,9 @@ app.config ($routeProvider) ->
     .when '/page/:id',
       templateUrl: '/views/page.html'
       controller: 'PageCtrl'
+    .when '/profile',
+      templateUrl: '/views/profile.html'
+      controller: 'ProfileCtrl'
     .otherwise
       templateUrl: '/views/404.html'
 
@@ -24,3 +27,6 @@ app.controller 'WelcomeCtrl', ($scope)->
 app.controller 'PageCtrl', ($scope, $routeParams)->
   $scope.header = "PageCtrl"
   $scope.params = $routeParams
+
+app.controller 'ProfileCtrl', ($scope, $routeParams)->
+  $scope.header = "ProfileCtrl"

@@ -10,6 +10,7 @@
     "angular-sanitize": "latest",
     "angular-route": "latest",
     "angular-animate": "latest",
+    "fontawesome": "latest",
     "components-font-awesome": "latest"
   }
 }

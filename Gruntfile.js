@@ -35,6 +35,18 @@ module.exports = function (grunt) {
        src: '*',
        dest: buildDir + 'fonts/'
      },
+     fontawesome: {
+       cwd: "./bower_components/fontawesome/fonts",
+       expand: true,
+       src: '*',
+       dest: buildDir + 'fonts/'
+     },
+     img: {
+        cwd: 'src/imgs/',
+        expand: true,
+        src: '*',
+        dest: buildDir + 'imgs/'
+     }
     },
     concat: {
       lib: {
@@ -80,7 +92,7 @@ module.exports = function (grunt) {
     less: {
       development: {
         options: {
-          paths: ["src/less", "bower_components/bootstrap/less"],
+          paths: ["src/less", "bower_components"],
           cleancss: true,
           modifyVars: { bgColor: 'white' }
         },

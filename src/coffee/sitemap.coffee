@@ -7,7 +7,9 @@ app.service 'sitemap', ()->
   ]
   user: [
     {label: "Profile", href: '#/profile'}
-    {label: "Sign in", href: '#/login'}
+    {label: "", href: '#/profile', icon: 'github'}
+    {label: "", href: '#/profile', icon: 'facebook'}
+    {label: "", href: '#/profile', icon: 'twitter'}
   ]
 
 
