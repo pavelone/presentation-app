@@ -6,9 +6,11 @@ module.exports = function (grunt) {
   'grunt-contrib-copy',
   'grunt-contrib-watch',
   'grunt-contrib-clean',
+  'grunt-contrib-concat',
   'grunt-contrib-less',
   'grunt-webpack',
-  'grunt-connect'
+  'grunt-connect',
+  'grunt-angular-templates'
   ].forEach(function(tsk){
     grunt.loadNpmTasks(tsk);
   })
@@ -34,11 +36,24 @@ module.exports = function (grunt) {
        dest: buildDir + 'fonts/'
      },
     },
+    concat: {
+      lib: {
+        src: [
+          "./bower_components/jquery/dist/jquery.min.js",
+          "./bower_components/angular/angular.js",
+          "./bower_components/angular-route/angular-route.js",
+          "./bower_components/angular-animate/angular-animate.js",
+          "./bower_components/angular-cookies/angular-cookies.js",
+          "./bower_components/angular-sanitize/angular-sanitize.js"
+        ],
+        dest: buildDir + 'js/lib.js'
+      }
+    },
     webpack: {
       app: {
         entry: "./src/coffee/app.coffee",
         output: {
-          path: buildDir,
+          path: buildDir + '/js',
           filename: "app.js",
           library: "app",
           libraryTarget: "umd"
@@ -49,6 +64,17 @@ module.exports = function (grunt) {
           ]
         },
         resolve: { extensions: ["", ".webpack.js", ".web.js", ".js", ".coffee"]}
+      }
+    },
+    ngtemplates: {
+      app: {
+        cwd: 'src/',
+        src: 'views/**/*.html',
+        dest: buildDir + 'js/views.js',
+        options: {
+          module: 'app',
+          prefix: '/'
+        }
       }
     },
     less: {
@@ -74,6 +100,6 @@ module.exports = function (grunt) {
    connect: { default: { port: 8080, base: 'dist' } }
   });
 
-  grunt.registerTask('build', ['clean','webpack','less', 'copy']);
+  grunt.registerTask('build', ['clean','concat','webpack','ngtemplates', 'less', 'copy']);
   grunt.registerTask('server', ['connect']);
 };

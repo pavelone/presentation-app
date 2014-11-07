@@ -7,6 +7,7 @@
     "grunt-cli": "latest",
     "bower": "latest",
     "grunt-contrib-copy": "latest",
+    "grunt-contrib-concat": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-watch": "latest",
@@ -14,6 +15,7 @@
     "webpack": "latest",
     "grunt-webpack": "latest",
     "coffee": "latest",
+    "grunt-angular-templates": "latest",
     "coffee-loader": "latest"
   },
   "engines": {

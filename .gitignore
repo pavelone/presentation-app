@@ -4,3 +4,4 @@ node_modules
 resources/publicbower_components
 bower_components
 *sw?
+npm-debug.log
