@@ -1,15 +1,18 @@
 app = require('./module')
 
-app.service 'sitemap', ()->
+capitalize = (s)->
+  s && s[0].toUpperCase() + s.slice(1)
+
+buildSiteMap = (x)->
+  x.href ||= "#/#{x.name}"
+  x.templateUrl ||= "/views/#{x.name}.html"
+  x.controller ||= "#{capitalize(x.name)}Ctrl"
+  x
+
+module.exports = {
   main: [
     {label:"Home", href: "#/"}
-    {label:"Page1", href: "#/page/:id"}
-  ]
-  user: [
-    {label: "Profile", href: '#/profile'}
-    {label: "", href: '#/profile', icon: 'github'}
-    {label: "", href: '#/profile', icon: 'facebook'}
-    {label: "", href: '#/profile', icon: 'twitter'}
-  ]
-
-
+    {name: 'page1', label:"Page1"}
+    {name: 'page2', label:"Page2"}
+  ].map(buildSiteMap)
+}
