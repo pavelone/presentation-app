@@ -4,7 +4,9 @@
 
 .navbar-brand {
   .icon {
-    color: @redy;
+    color: black;
+    font-size: 25px;
+    margin:0;
   }
 }
 
@@ -27,7 +29,6 @@
 }
 
 .view {
-  padding: 20px 50px;
   margin: 0 auto;
   &.ng-enter,
   &.ng-leave {
@@ -85,22 +86,22 @@
   }
 }
 
-// @font-face {
-//   font-family: 'LogosFont';
-//   src: url('../fonts/LogosFont.ttf');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'LogosFont';
+  src: url('../fonts/LogosFont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// .icon {
-//   display: inline-block;
-//   font-family: LogosFont ;
-//   font-style: normal;
-//   font-weight: normal;
-//   line-height: 1;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
+.icon {
+  display: inline-block;
+  font-family: LogosFont ;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .navbar-default .navbar-nav>li>a {
   color: #666;
@@ -145,4 +146,63 @@
   &:before {
     opacity: 1;
   }
+}
+.stack {
+  margin-top: 2em;
+  margin: 0;
+  .layer {
+    // border: 1px solid #ddd;
+    // margin: 10px 5px;
+    // border-radius: 5px;
+    background-color: white;
+    // box-shadow: 1px 2px 2px #aaa;
+    h3 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px 0px;
+      border-bottom: 1px solid #ddd;
+      // background: #eee;
+      // text-shadow: -1px -1px -1px white;
+      border-radius: 5px 5px 0 0;
+    }
+    .cnt {
+      padding: 20px 0;
+    }
+  }
+}
+.navbar {
+  margin-bottom: 0;
+}
+.stripe {
+  padding: 30px;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+.boom {
+  padding: 40px;
+  background-image: url('http://wallpapers.free-review.net/wallpapers/23/Eye_blue_dragon.jpg');
+  h1 {
+    font-size: 70px;
+  }
+  h3 {
+    color: #e62b1e;
+  }
+  @icon-cycle: 150px;
+  .icon {
+    margin-top: 10px;
+    font-size: @icon-cycle;
+    // text-shadow: -1px -1px 1px white;
+    width: @icon-cycle;
+    height: @icon-cycle;
+    display: inline-block;
+    // border: 1px solid #ddd;
+    // border-radius: 100%;
+    // background-color: #f1f1f1;
+  }
+}
+.important {
+  font-size: 24px;
+  color: #666;
 }

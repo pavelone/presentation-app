@@ -1,6 +1,6 @@
 {
-  "name": "test",
-  "title": "test plugin",
+  "name": "fhirbase-presentation",
+  "title": "Presentation about fhirbase",
   "version": "0.0.1",
-  "description": "just plugin template"
+  "description": "Presentation about fhirbase"
 }

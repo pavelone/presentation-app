@@ -11,8 +11,10 @@ buildSiteMap = (x)->
 
 module.exports = {
   main: [
-    {label:"Home", href: "#/"}
-    {name: 'page1', label:"Page1"}
-    {name: 'page2', label:"Page2"}
+    {label:"fhirbase", href: "#/"}
+    {name: 'install', label:"Installation", controller: 'WelcomeCtrl'}
+    {name: 'fhirbase', label:"Working with fhirbase", controller: 'WelcomeCtrl'}
+    {name: 'frontend', label:"Create frontend app", controller: 'WelcomeCtrl'}
+    {name: 'application', label:"Application",  controller: 'WelcomeCtrl'}
   ].map(buildSiteMap)
 }

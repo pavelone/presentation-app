@@ -40,6 +40,7 @@ activate = (name)->
       delete x.active
 
 app.run ($rootScope)->
+  $rootScope.brand = "Fhirbase"
   $rootScope.sitemap = sitemap
   $rootScope.$on  "$routeChangeStart", (event, next, current)->
     activate(next.name)
