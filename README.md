@@ -1,4 +1,4 @@
-fhirplace example plugin
+fhirbase presentation app
 ======================
 
 ```sh
@@ -7,7 +7,6 @@ fhirplace example plugin
 
  npm install
  npm start # to start dev server on localhost:8080
- npm run-script build # to build into dist directory
+ npm run-script fhir # to pubhish on fhirplace
 
- `npm bin`/fhirbase # to publish
 ```
