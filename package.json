@@ -1,8 +1,9 @@
 {
-  "name": "MYAPP",
+  "name": "fhirbase-empty-plugin",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
+    "fhirbase.js": "0.0.3",
     "bower": "latest",
     "coffee": "latest",
     "coffee-loader": "latest",

@@ -1,7 +1,6 @@
-app/bower_components
-dist
+dist dist.tar.gz
 node_modules
-resources/publicbower_components
 bower_components
+dist.tar.gz
+dist/
 *sw?
-npm-debug.log
