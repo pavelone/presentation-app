@@ -1,3 +1,4 @@
+require('../views/md.html')
 require('../views/404.html')
 require('../views/index.html')
 require('../views/install.html')

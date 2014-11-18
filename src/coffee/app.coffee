@@ -1,22 +1,11 @@
-require('../../bower_components/angular/angular.js')
-require('../../bower_components/angular-route/angular-route.js')
-require('../../bower_components/angular-sanitize/angular-sanitize.js')
-require('../../bower_components/angular-animate/angular-animate.js')
-require('../../bower_components/angular-cookies/angular-cookies.js')
-
+app = require('./module')
 
 require('file?name=index.html!../index.html')
 require('file?name=fhir.json!../fhir.json')
 require('../less/app.less')
-
-app = require('./module')
-
 require('./views')
-require('./data')
 
 sitemap = require('./sitemap')
-
-log = require('./logger')
 
 app.config ($routeProvider) ->
   rp = $routeProvider
@@ -48,13 +37,13 @@ app.run ($rootScope)->
 app.controller 'WelcomeCtrl', ($scope)->
   $scope.header = "WelcomeCtrl"
 
-app.controller 'Page1Ctrl', ($scope, $routeParams)->
-  $scope.header = "Page1Ctrl"
-  $scope.params = $routeParams
+app.controller 'FrontendCtrl', ($scope, $sce)->
+  content = require('../markdown/frontend.md')
+  $scope.content = $sce.trustAsHtml(content)
 
-app.controller 'Page2Ctrl', ($scope, $routeParams)->
-  $scope.header = "Page2Ctrl"
-  $scope.params = $routeParams
+app.controller 'InstallCtrl', ($scope, $sce)->
+  content = require('../markdown/install.md')
+  $scope.content = $sce.trustAsHtml(content)
 
 app.controller 'ProfileCtrl', ($scope, $routeParams)->
   $scope.header = "ProfileCtrl"
