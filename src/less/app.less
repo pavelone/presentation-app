@@ -147,35 +147,11 @@
     opacity: 1;
   }
 }
-.stack {
-  margin-top: 2em;
-  margin: 0;
-  .layer {
-    // border: 1px solid #ddd;
-    // margin: 10px 5px;
-    // border-radius: 5px;
-    background-color: white;
-    // box-shadow: 1px 2px 2px #aaa;
-    h3 {
-      margin: 0;
-      font-weight: bold;
-      font-size: 16px;
-      padding: 10px 0px;
-      border-bottom: 1px solid #ddd;
-      // background: #eee;
-      // text-shadow: -1px -1px -1px white;
-      border-radius: 5px 5px 0 0;
-    }
-    .cnt {
-      padding: 20px 0;
-    }
-  }
-}
 .navbar {
   margin-bottom: 0;
 }
 .stripe {
-  padding: 30px;
+  padding: 50px 30px;
   color: #333;
   background: #eee;
   background-image: url('../imgs/bg1.png');
@@ -228,4 +204,83 @@
     margin: 20px 30px;
     box-shadow: 0px 0px 4px #aaa;
   }
+}
+.stack {
+  margin: 2em 0;
+  .layer {
+    position: relative;
+    padding: 10px;
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    margin: 10px 5px;
+    background: #eee;
+    .title {
+      position: absolute;
+      right: 5px;
+      top: 0px;
+      padding: 4px;
+      margin: 0;
+      font-size: 14px;
+      display: inline-block;
+    }
+    .app {
+      vertical-align: top;
+      background-color: #fff;
+      display: inline-block;
+      margin: 5px;
+      width: 200px;
+      border-radius: 0px;
+      border: 1px solid #ddd;
+      min-height: 100px;
+      h3 {
+        margin: 0;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+      }
+      .cnt {
+        padding: 5px;
+      }
+    }
+  }
+  .connectors {
+    text-align: center;
+    .connector {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      background: #f1f1f1;
+      margin: 0 5px;
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-top: -10px;
+        content: ' ';
+        height: 10px;
+        width: 1px;
+        background-color: #ccc;
+        z-index: 1000;
+      }
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-bottom: -10px;
+        content: ' ';
+        height: 10px;
+        width: 1px;
+        background-color: #ccc;
+        z-index: 1000;
+      }
+    }
+  }
+}
+footer {
+  margin-top: 5em;
+  border-top: 1px solid #ddd;
+  background: #eee;
+  padding: 30px;
 }
