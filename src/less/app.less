@@ -176,14 +176,19 @@
 }
 .stripe {
   padding: 30px;
+  color: #333;
   background: #eee;
+  background-image: url('../imgs/bg1.png');
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   margin: 40px 0;
+  .important {
+    text-shadow: -1px -1px 1px white;
+    font-size: 24px;
+  }
 }
 .boom {
   margin: 30px 0;
-  background-image: url('http://wallpapers.free-review.net/wallpapers/23/Eye_blue_dragon.jpg');
   h1 {
     font-size: 70px;
   }
@@ -193,19 +198,12 @@
   @icon-cycle: 150px;
   .icon {
     margin-top: 10px;
+    color: #333;
     font-size: @icon-cycle;
-    // text-shadow: -1px -1px 1px white;
     width: @icon-cycle;
     height: @icon-cycle;
     display: inline-block;
-    // border: 1px solid #ddd;
-    // border-radius: 100%;
-    // background-color: #f1f1f1;
   }
-}
-.important {
-  font-size: 24px;
-  color: #666;
 }
 .markdown {
   h1, .h1, h2, .h2, h3, .h3 {
@@ -219,6 +217,7 @@
   img {
     box-shadow: 0px 0px 4px #aaa;
     margin: 20px 30px;
+    border-radius: 4px;
   }
   pre {
     border-radius: none;
