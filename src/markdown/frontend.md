@@ -64,15 +64,15 @@ Take a look at new application structure:
 ├── src
 │   ├── coffee
 │   │   ├── app.coffee
-
+...
 │   ├── fhir.json
 │   ├── index.html
 │   ├── less
 │   │   └── app.less
-
+...
 │   └── views
 │       ├── index.html
-
+...
 └── webpack.config.js
 
 5 directories, 22 files
@@ -118,7 +118,21 @@ less package.json
 [Bower](http://bower.io/) is responsible for managing application dependencies.
 
 To use [fhir.js](https://github.com/FHIR/fhir.js) client library
-add `"fhir.js": "0.0.5"` to `bower.json`.
+add `"fhir.js": "0.0.5"` to `bower.json`:
+
+```
+less bower.json
+
+{
+  "name": "fhirplace-spa-ui",
+  "version": "0.0.0",
+  "dependencies": {
+...
+    "fontawesome": "latest",
+    "fhir.js": "0.0.5"
+  }
+}
+```
 
 Then add some simple logic:
 require [AngularJs](https://angularjs.org/) provider,
