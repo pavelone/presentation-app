@@ -65,7 +65,7 @@ we can operate with. So let's create some resources first.
 
 Resources are created with **fhir_create** SP which takes four parameters:
 
-* cfg (jsonb) - Confguration data
+* cfg (jsonb) - Configuration data
 * resource_type (varchar) - Type of resource being created, e.g. 'Organization' or 'Patient'
 * resource_content (jsonb) - Content of resource being created
 * tags (jsonb) - Array of <a href="http://www.hl7.org/implement/standards/fhir/extras.html#tag">FHIR tags</a> for resource
