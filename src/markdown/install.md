@@ -163,7 +163,7 @@ In "Output" pane you'll see Organization resource we inserted in the previous st
 
 ![pgAdmin Connection Screenshot](../imgs/pgadmin-sql-search-result.png)
 
-Summarizing up, we connected to fhirbase using pgAdmin and performed
+Summarizing up, we have connected to fhirbase using pgAdmin and performed
 some queries to test if it actually works. Please, refer to
 [fhirbase](https://github.com/fhirbase/fhirbase) and
 [PostgreSQL](http://www.postgresql.org/docs/) Documentation for
