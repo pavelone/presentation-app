@@ -25,8 +25,6 @@ This is preconfigured application, which consist of:
 
 All util scripts are described at package.json
 
-
-
 You can publish it on any installation of
 [fhirplace]() server.
 
@@ -47,13 +45,13 @@ To illustrate we use [fhirplace](http://fhirplace.health-samurai.io/)
 generic implementation of [fhir server](http://www.hl7.org/implement/standards/fhir/http.html)
 and [fhir.js](https://github.com/FHIR/fhir.js) client library.
 
-Start with [fhirplace-empty-plugin](https://github.com/fhirbase/fhirplace-empty-plugin) sample application
+Start with [fhirplace-empty-plugin](https://github.com/fhirbase/fhirplace-empty-plugin) sample application:
 
 ```
 git clone https://github.com/fhirbase/fhirplace-empty-plugin sample
 ```
 
-Take a look at new application structure
+Take a look at new application structure:
 
 ```sh
 | ~ | cd sample 
@@ -66,16 +64,23 @@ Take a look at new application structure
 ├── src
 │   ├── coffee
 │   │   ├── app.coffee
+
 │   ├── fhir.json
 │   ├── index.html
 │   ├── less
 │   │   └── app.less
+
 │   └── views
 │       ├── index.html
+
 └── webpack.config.js
 
 5 directories, 22 files
 ```
+
+We use [node.js](http://nodejs.org/) as development runtime and [npm](https://www.npmjs.org/) to manage development tools.
+
+Look at `package.json` to understand development environment:
 
 ```sh
 less package.json
@@ -110,40 +115,17 @@ less package.json
 }
 ```
 
-we use [node.js]() as development runtime
-install node.js
-[bower]() to manage dependencies
+[Bower](http://bower.io/) is responsible for managing application dependencies.
 
-add `"fhir.js": "0.0.5"` to bower file
-this will add fhir.js client library
-entry point to application is `src/index.html`
-<script src="app.js"></script> will add all javascript produced to application
+To use [fhir.js](https://github.com/FHIR/fhir.js) client library
+add `"fhir.js": "0.0.5"` to `bower.json`.
 
-    "start": "bower prune && bower install && webpack-dev-server --port 11166 --progress --colors"
+Then add some simple logic:
+require [AngularJs](https://angularjs.org/) provider,
+set `url` to `fhir server` and get all `Alert` resources from `fhir server`.
 
-then run
-```sh
-npm install
-```
+`src/coffee/app.coffee`
 
-```sh
-npm start
-```
-At some point you will see:
-```sh
-> bower prune && bower install && webpack-dev-server --port 11166 --progress --colors
-```
-Than means you can go to localhost:11166 and see result
-
-
-
-* describe project structure with each file description
-* links to npm webpack bower angular twitter bootstrap
-* describe fhir.js library
-* add new page with link to 
-
-
-src/coffee/app.coffee
 ```
 require('../../bower_components/fhir.js/dist/ngFhir.js')
 
@@ -163,7 +145,6 @@ src/coffee/module.coffee
 'ng-fhir'
 ```
 
-
 src/views/index.html
 
 ```
@@ -172,15 +153,28 @@ src/views/index.html
 </div>
 ```
 
-![Screenshot](../imgs/sample.png)
+Entry point to application is `src/index.html`.
 
+Note that `<script src="app.js"></script>` will use all javascript code produced by [webpack](http://webpack.github.io/).
 
-now you ar ready to publish your application, modify
+Finally run:
 
+```sh
+npm install
+npm start
+```
 
-manifest file
+At some point you will see:
 
-src/fhir.json
+```sh
+> bower prune && bower install && webpack-dev-server --progress --colors
+```
+
+You can visit localhost:8080 and see something like:
+
+![Screenshot of Your Sample Application](../imgs/sample.png)
+
+Now you ar ready to publish your application, modify `src/fhir.json` manifest file:
 
 ```
 {
@@ -191,21 +185,20 @@ src/fhir.json
 }
 ```
 
-publish
+and `publish` file:
 
 ```
 APP='sample'
 ```
 
-run
+And:
+
 ```
 ./publish
 
 {"url":"\/sample\/index.html","name":"test","title":"Sample Application","version":"0.0.1","description":"Show Alert Resources"}
 ```
-navigate to
 
-(Sample Application) [http://fhirplace.health-samurai.io/sample/index.html#/]
-and see you application 
+Navigate to [Sample Application](http://fhirplace.health-samurai.io/sample/index.html#/) to see it published.
 
-full available at [github](https://github.com/fhirbase/sample-app)
+Full sources available at [github](https://github.com/fhirbase/sample-app).
