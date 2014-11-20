@@ -13,7 +13,7 @@ clone example repository [fhirbase-empty-plugin]()
 git clone https://github.com/fhirbase/fhirplace-empty-plugin [APP-NAME]
 ```
 
-This is preconfigured application, which consist of:
+This is a preconfigured application which consists of:
 
 * fhir.js
 * angularjs
@@ -188,7 +188,7 @@ You can visit localhost:8080 and see something like:
 
 ![Screenshot of Your Sample Application](../imgs/sample.png)
 
-Now you ar ready to publish your application, modify `src/fhir.json` manifest file:
+Now you are ready to publish your application, modify `src/fhir.json` manifest file:
 
 ```
 {
@@ -215,4 +215,4 @@ And:
 
 Navigate to [Sample Application](http://fhirplace.health-samurai.io/sample/index.html#/) to see it published.
 
-Full sources available at [github](https://github.com/fhirbase/sample-app).
+Full sources are available at [github](https://github.com/fhirbase/sample-app).
