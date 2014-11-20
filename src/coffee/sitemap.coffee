@@ -13,7 +13,7 @@ module.exports = {
   main: [
     {label:"fhirbase", href: "#/"}
     {name: 'install', label:"Installation", templateUrl: '/views/md.html'}
-    {name: 'fhirbase', label:"Working with fhirbase", controller: 'WelcomeCtrl'}
+    {name: 'fhirbase', label:"Working with fhirbase", templateUrl: '/views/md.html'}
     {name: 'frontend', label:"Create frontend app", templateUrl: '/views/md.html'}
     # {name: 'application', label:"Application",  controller: 'WelcomeCtrl'}
   ].map(buildSiteMap)

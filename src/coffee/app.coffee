@@ -45,5 +45,9 @@ app.controller 'InstallCtrl', ($scope, $sce)->
   content = require('../markdown/install.md')
   $scope.content = $sce.trustAsHtml(content)
 
+app.controller 'FhirbaseCtrl', ($scope, $sce)->
+  content = require('../markdown/fhirbase.md')
+  $scope.content = $sce.trustAsHtml(content)
+
 app.controller 'ProfileCtrl', ($scope, $routeParams)->
   $scope.header = "ProfileCtrl"
