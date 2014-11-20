@@ -1,4 +1,4 @@
-## Creating frontend application for fhirplace
+## Creating front-end application for fhirplace
 
 ---
 
@@ -39,7 +39,7 @@ open browser on http://localhost:8080:
 npm start
 ```
 
-## Creating frontend application for fhir server
+## Creating front-end application for fhir server
 
 To illustrate we use [fhirplace](http://fhirplace.health-samurai.io/)
 generic implementation of [fhir server](http://www.hl7.org/implement/standards/fhir/http.html)
