@@ -1,12 +1,12 @@
 ## Installation
 
 FHIRPlace and FHIRBase both are using a lot of third-party software
-like PostgreSQL, Java, Node.js, etc. Installing it by hand is an
+like PostgreSQL, Java, Node.js, etc. Installing it by hand is a
 complex task which can take several working days to accomplish.
 
-Fortunatelly, another approach is available nowadays. Instead of
+Fortunately, another approach is available nowadays. Instead of
 installing all required software manually, one can use virtualization
-technologies to run a "virtual machine" with alredy pre-configured
+technologies to run a "virtual machine" with already pre-configured
 operating system.
 
 To quickly get FHIRPlace up and running we advice you to follow
@@ -14,7 +14,7 @@ virtualization path. If you're willing to install FHIRPlace to your
 local machine or server, please follow full
 [Installation Manual](https://github.com/fhirbase/fhirplace/wiki/InstallationManual).
 
-## Running FHIRPlace's Virtual Machine
+## Running FHIRPlace Virtual Machine
 
 ### Mac OS X and Windows
 
@@ -26,14 +26,14 @@ describe it here. If problems arise, refer to
 
 ### Linux
 
-If you're runnig some flavour of Linux, make sure you have Docker installed:
+If you're runnig some flavor of Linux, make sure you have Docker installed:
 
 ```bash
 $ docker --version # or docker.io --version
 ```
 
 If `docker` binary is not present, install it using your
-distributive's package manager, e.g. `sudo apt-get install docker.io`.
+distributive package manager, e.g. `sudo apt-get install docker.io`.
 
 ### Installing Vagrant
 
@@ -43,19 +43,19 @@ developers use. Navigate to
 [downloads page](https://www.vagrantup.com/downloads.html) to get an
 installer suitable for your OS. After installation is finished, run
 Terminal application (on Mac OS X) or Command Prompt (on Windows) to
-test if installation was successful. Type following command:
+test if installation was successful. Type the following command:
 
 ```bash
 vagrant --version
 ```
 
-If you see output like
+If you see an output like
 
 ```bash
 Vagrant 1.6.5
 ```
 
-you had successfuly installed Vagrant.
+you have successfully installed Vagrant.
 
 ### Getting FHIRPlace source code
 
@@ -68,7 +68,7 @@ and unpack it somewhere in your file system.
 ### Starting VMs
 
 Open Terminal (or Command Prompt) and navigate to directory where
-FHIRPlace's source code is located, e.g.:
+FHIRPlace source code is located, e.g.:
 
 ```bash
 cd ~/work/fhirplace
@@ -80,7 +80,7 @@ Then start FHIRPlace VMs with command:
 vagrant up fhirbase && vagrant up fhirplace
 ```
 
-Initial VMs startup can take a lot of time because Vagrant have to
+Initial VMs startup can take a lot of time because Vagrant has to
 download several OS images (about 1.5 Gb total) and unpack them. Next
 startups will be much faster (almost instant).
 
@@ -91,13 +91,13 @@ http://localhost:3000/ and you'll see FHIRPlace welcome page.
 
 When you finish your work with FHIRPlace, you may decide to stop running
 VMs to free system resources that they have allocated. This can be done with
-following command:
+the following command:
 
 ```bash
 vagrant halt fhirbase fhirplace
 ```
 
-## Accessing FHIRBase with pgAdmin
+## Accessing FHIRBase via pgAdmin
 
 You can access FHIRBase directly using any PostgreSQL client like
 command-line `psql` utility or graphical
@@ -105,7 +105,7 @@ command-line `psql` utility or graphical
 to FHIRBase with pgAdmin, actions in other clients are similar.
 
 Run pgAdmin and click <kbd>File -> Add server...</kbd> menu. Enter
-following connection paremeters in dialog window:
+the following connection parameters in the dialog window:
 
 Parameter | Value
 ----------|----------
@@ -148,7 +148,7 @@ query. You should see result in "Output" pane:
 
 ![pgAdmin Connection Screenshot](../imgs/pgadmin-sql-result.png)
 
-That means query was executed successfuly. Now let's try to find newly
+That means query was executed successfully. Now let's try to find newly
 created Organization with FHIR search functionality. Copy-paste
 following query in editor window and execute it:
 
@@ -159,12 +159,12 @@ SELECT * FROM search(
 );
 ```
 
-In "Output" pane you'll see Organization resource we inserted in previous step.
+In "Output" pane you'll see Organization resource we inserted in the previous step.
 
 ![pgAdmin Connection Screenshot](../imgs/pgadmin-sql-search-result.png)
 
 Summarizing up, we connected to FHIRBase using pgAdmin and performed
-some queries to test if it's actually works. Please, refer to
+some queries to test if it actually works. Please, refer to
 [FHIRBase](https://github.com/fhirbase/fhirbase) and
 [PostgreSQL](http://www.postgresql.org/docs/) Documentation for
 further reading.
